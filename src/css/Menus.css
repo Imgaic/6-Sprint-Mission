@@ -1,0 +1,10 @@
+.menus__menu {
+  margin-left: 48px;
+}
+
+/*애매한점: 어디까지가 태블릿 사이즈냐, ipad mini는? */
+@media (max-width: 743px) {
+  .menus__menu {
+    margin-left: 16px;
+  }
+}
