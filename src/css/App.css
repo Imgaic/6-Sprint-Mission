@@ -1,0 +1,13 @@
+body {
+  background-color: #fcfcfc;
+}
+
+.best-items {
+  margin: 24px auto 40px;
+  max-width: 1201px;
+}
+
+.entire-items {
+  margin: 40px auto;
+  max-width: 1201px;
+}

@@ -7,21 +7,27 @@
   --gray800: #1f2937;
   --gray700: #374151;
   --gray600: #4b5563;
-  --gray500: #6B7280;
-  --gray400: #9CA3AF;
-  --gray200: #E5E7EB;
-  --gray100: #F3F4F6;
-  --gray50: #F3F4F6;
-  --blue: #3692FF;
+  --gray500: #6b7280;
+  --gray400: #9ca3af;
+  --gray200: #e5e7eb;
+  --gray100: #f3f4f6;
+  --gray50: #f3f4f6;
+  --blue: #3692ff;
   --red: #f74747;
   --white: #fff;
 }
 
-html, input, textarea, button, select {
-  font-family: 'Pretendard', 'sans-serif';
+html,
+input,
+textarea,
+button,
+select {
+  font-family: "Pretendard", "sans-serif";
 }
 
-input {
+input,
+select,
+button {
   border: none;
   outline: none;
 }
