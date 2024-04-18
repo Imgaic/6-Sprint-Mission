@@ -1,7 +1,7 @@
 .entire-items__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 325px 133px 130px;
+  gap: 12px;
 }
 
 .entire-items__name-tag {
@@ -9,11 +9,9 @@
   font-weight: 700;
   color: var(--gray900);
   line-height: 28px;
-}
 
-.entire-items__flex-container {
   display: flex;
-  gap: 12px;
+  align-items: center;
 }
 
 .entire-items__search-container {
@@ -29,11 +27,11 @@
 .entire-items__search {
   width: 325px;
   height: 42px;
-  line-height: 42px;
+  /* line-height: 42px; 어차피안먹음*/
   border-radius: 12px;
   background-color: var(--gray100);
 
-  padding: 9px 16px 9px 44px;
+  padding: 9px 24px 9px 44px;
 }
 
 .entire-items__search::placeholder {
@@ -130,11 +128,11 @@
   flex-wrap: wrap;
   overflow: hidden;
 
-  min-width: 1201px;
-  min-height: 630px;
+  min-width: 1201px; /*1201~14 쯔음 다음줄로 넘어가버리는 현상 때문에*/
+  height: 642px;
 }
 
-.item__img-container {
+.entire-items__img-container {
   width: 221px;
   height: 221px;
 }
@@ -146,4 +144,71 @@
   gap: 4px;
 
   margin: 40px 0px 100px;
+}
+
+@media (max-width: 1200px) {
+  .entire-items__container {
+    display: grid;
+    grid-template-columns: 1fr 242px 133px 120px;
+    gap: 12px;
+  }
+  .entire-items__order-select,
+  .entire-items__dropped,
+  .entire-items__order-option {
+    width: 120px;
+  }
+  .entire-items__search {
+    width: 242px;
+  }
+  .entire-items__layout {
+    gap: 40px 16px;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 743px) {
+  .entire-items__container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 83px 42px;
+    grid-template-rows: 42px 42px;
+    gap: 8px;
+  }
+  .entire-items__name-tag {
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+  }
+  .entire-items__search-container {
+    grid-column: 1/3;
+    grid-row: -2;
+  }
+  .entire-items__search {
+    width: 294px;
+  }
+  .entire-items__drop-down {
+    grid-column: -2/-1;
+    grid-row: -2;
+  }
+  .entire-items__dropped,
+  .entire-items__order-option {
+    width: 130px;
+  }
+  .entire-items__dropped {
+    right: 0; /*오른쪽에 딱 맞춘다에 의의*/
+  }
+  .entire-items__order-select {
+    width: 42px;
+    background-image: url("../assets/icons/ic_sort.svg");
+    background-position: center;
+  }
+  .entire-items__layout {
+    gap: 32px 8px;
+    height: 528px;
+  }
+  .entire-items__img-container {
+    width: 168px;
+    height: 168px;
+  }
 }

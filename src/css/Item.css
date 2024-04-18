@@ -23,12 +23,14 @@
   font-size: 14px;
   font-weight: 500;
   color: var(--gray800);
+  line-height: 17px;
 }
 
 .item__price {
   font-size: 16px;
   font-weight: 700;
   color: var(--gray800);
+  line-height: 19px;
 }
 
 .item__favorite-container {

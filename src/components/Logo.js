@@ -11,7 +11,8 @@ function Logo() {
     window.innerWidth >= 744 ? setLogoImage(logo) : setLogoImage(logo_mobile);
   };
 
-  window.onresize = handleImageSize;
+  // window.onresize = handleImageSize; //entireItems랑 덮어씌워짐 -> addEventListener사용해야
+  window.addEventListener("resize", handleImageSize);
 
   return (
     <a href="/">

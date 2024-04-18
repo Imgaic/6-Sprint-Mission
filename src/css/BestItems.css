@@ -13,14 +13,21 @@
   overflow: hidden;
 }
 
-.item__img-container {
+.best-items__img-container {
   width: 282px;
   height: 282px;
 }
 
-/* @media (max-width: 1199px) {
-  .best-items__item-img-container {
+@media (max-width: 1200px) {
+  .best-items__img-container {
     width: 336px;
     height: 336px;
   }
-} */
+}
+
+@media (max-width: 743px) {
+  .best-items__img-container {
+    width: 343px;
+    height: 343px;
+  }
+}

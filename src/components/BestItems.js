@@ -8,7 +8,11 @@ function BestItems({ className, items }) {
       <div className="best-items__layout">
         {items.map((item) => {
           return (
-            <Item key={item.id} className="item__img-container" item={item} />
+            <Item
+              key={item.id}
+              className="best-items__img-container"
+              item={item}
+            />
           );
         })}
       </div>
