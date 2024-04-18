@@ -129,9 +129,21 @@
   gap: 40px 24px;
   flex-wrap: wrap;
   overflow: hidden;
+
+  min-width: 1201px;
+  min-height: 630px;
 }
 
 .item__img-container {
   width: 221px;
   height: 221px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  margin: 40px 0px 100px;
 }

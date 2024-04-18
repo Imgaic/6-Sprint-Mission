@@ -1,6 +1,7 @@
 import Item from "./Item";
 import "../css/EntireItems.css";
 import searchIcon from "../assets/icons/ic_search.svg";
+import Pagination from "./Pagination";
 // import { useRef } from "react";
 
 function EntireItems({ className, items, order, handleOrder }) {
@@ -64,6 +65,7 @@ function EntireItems({ className, items, order, handleOrder }) {
           );
         })}
       </div>
+      <Pagination className="pagination" />
     </div>
   );
 }

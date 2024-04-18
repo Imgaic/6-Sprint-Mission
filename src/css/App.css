@@ -11,3 +11,9 @@ body {
   margin: 40px auto;
   max-width: 1201px;
 }
+
+@media (max-width: 1200px) {
+  .best-items {
+    margin: 24px 24px 40px;
+  }
+}

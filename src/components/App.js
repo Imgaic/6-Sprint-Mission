@@ -4,41 +4,45 @@ import Nav from "./Nav";
 import "../css/App.css";
 import { useEffect, useState } from "react";
 import { getItems } from "../api";
+import PageContext from "../contexts/pageContext";
 
 function App() {
   const [items, setItems] = useState([]);
   const [order, setOrder] = useState("recent");
   const [bestItems, setBestItems] = useState([]);
+  const [page, setPage] = useState("1");
   // const sortedItems = items.sort((a, b) => b[order] - a[order]);
 
-  const handleLoad = async (orderQuery) => {
-    const { list } = await getItems(orderQuery);
+  const handleLoad = async (options) => {
+    const { list } = await getItems(options);
     setItems(list);
   };
 
-  const loadBestItems = async () => {
-    const { list } = await getItems("favorite");
+  const loadBestItems = async (options) => {
+    const { list } = await getItems(options);
     setBestItems(list);
   };
 
   useEffect(() => {
-    handleLoad(order);
-  }, [order]);
+    loadBestItems({ order: "favorite", page: "1" });
+  }, []);
 
   useEffect(() => {
-    loadBestItems();
-  }, []);
+    handleLoad({ order, page });
+  }, [order, page]);
 
   return (
     <>
       <Nav />
       <BestItems className="best-items" items={bestItems} />
-      <EntireItems
-        className="entire-items"
-        items={items}
-        order={order}
-        handleOrder={setOrder}
-      />
+      <PageContext.Provider value={{ page, setPage }}>
+        <EntireItems
+          className="entire-items"
+          items={items}
+          order={order}
+          handleOrder={setOrder}
+        />
+      </PageContext.Provider>
     </>
   );
 }
