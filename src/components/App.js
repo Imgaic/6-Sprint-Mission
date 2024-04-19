@@ -11,7 +11,33 @@ function App() {
   const [order, setOrder] = useState("recent");
   const [bestItems, setBestItems] = useState([]);
   const [page, setPage] = useState("1");
-  // const sortedItems = items.sort((a, b) => b[order] - a[order]);
+  const [entireItemsPageSize, setEntireItemsPageSize] = useState(
+    calculatePageSize()
+  );
+
+  function calculatePageSize(type) {
+    if (type === "best") {
+      if (window.innerWidth >= 1201) {
+        return "4";
+      } else if (window.innerWidth >= 744) {
+        return "2";
+      } else {
+        return "1";
+      }
+    } else {
+      if (window.innerWidth >= 1201) {
+        return "10";
+      } else if (window.innerWidth >= 744) {
+        return "6";
+      } else {
+        return "4";
+      }
+    }
+  }
+
+  const handlePageSize = () => {
+    setEntireItemsPageSize(calculatePageSize());
+  };
 
   const handleLoad = async (options) => {
     const { list } = await getItems(options);
@@ -24,12 +50,18 @@ function App() {
   };
 
   useEffect(() => {
-    loadBestItems({ order: "favorite", page: "1" });
-  }, []);
+    loadBestItems({
+      order: "favorite",
+      page: "1",
+      pageSize: calculatePageSize("best"),
+    });
+  }, [entireItemsPageSize]); //같이 써도 상관X
 
   useEffect(() => {
-    handleLoad({ order, page });
-  }, [order, page]);
+    handleLoad({ order, page, pageSize: entireItemsPageSize });
+  }, [order, page, entireItemsPageSize]);
+
+  window.addEventListener("resize", handlePageSize);
 
   return (
     <>
