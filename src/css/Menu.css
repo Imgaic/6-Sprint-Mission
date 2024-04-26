@@ -5,6 +5,6 @@
   color: var(--gray600);
 }
 
-.menu.blue {
+.menu.active {
   color: var(--blue);
 }

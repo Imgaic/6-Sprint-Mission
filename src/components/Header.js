@@ -1,12 +1,12 @@
+import "../css/Header.css";
 import LoginLink from "./LoginLink";
 import Logo from "./Logo";
 import Menus from "./Menus";
-import "../css/Nav.css";
 
-function Nav() {
+function Header() {
   return (
-    <div className="nav">
-      <div className="nav__container">
+    <div className="header">
+      <div className="header__navbar">
         <Logo />
         <Menus />
       </div>
@@ -15,4 +15,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Header;
