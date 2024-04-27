@@ -13,19 +13,9 @@
   padding: 0px 200px;
 }
 
-.header__navbar {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  gap: 48px;
-}
-
 @media (max-width: 1200px) {
   .header {
     padding: 0px 34px 0 24px;
-  }
-  .header__navbar {
-    gap: 36px;
   }
 }
 
@@ -33,8 +23,5 @@
 @media (max-width: 743px) {
   .header {
     padding: 0px 16px;
-  }
-  .header__navbar {
-    gap: 16px;
   }
 }

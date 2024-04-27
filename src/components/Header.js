@@ -1,16 +1,11 @@
 import "../css/Header.css";
-import LoginLink from "./LoginLink";
-import Logo from "./Logo";
-import Menus from "./Menus";
+import Navbar from "./Navbar";
 
-function Header() {
+function Header({ children }) {
   return (
     <div className="header">
-      <div className="header__navbar">
-        <Logo />
-        <Menus />
-      </div>
-      <LoginLink />
+      <Navbar />
+      {children}
     </div>
   );
 }

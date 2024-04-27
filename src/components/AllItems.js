@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { getItems } from "../api";
 import searchIcon from "../assets/icons/ic_search.svg";
@@ -50,9 +51,9 @@ function AllItems({ className, pageSize }) {
             placeholder="검색할 상품을 입력해주세요"
           ></input>
         </div>
-        <a className="all-items__add-item-link" href="/additem">
+        <Link className="all-items__add-item-link" to="/additem">
           상품 등록하기
-        </a>
+        </Link>
         <Dropdown order={order} setOrder={setOrder}>
           <DropdownItem
             onClick={handleClick}

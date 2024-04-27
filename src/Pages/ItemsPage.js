@@ -1,13 +1,14 @@
 import { useState } from "react";
 
+import AllItems from "../components/AllItems";
+import BestItems from "../components/BestItems";
+import Header from "../components/Header";
+import LoginLink from "../components/LoginLink";
 import PaginationProvider from "../contexts/paginationContext";
-import "../css/App.css";
+import "../css/ItemsPage.css";
 import { calculatePageSize } from "../module";
-import AllItems from "./AllItems";
-import BestItems from "./BestItems";
-import Header from "./Header";
 
-function App() {
+function ItemsPage() {
   const [entireItemsPageSize, setEntireItemsPageSize] =
     useState(calculatePageSize());
 
@@ -19,7 +20,9 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header>
+        <LoginLink />
+      </Header>
       <BestItems className="best-items" pageSize={entireItemsPageSize} />
       <PaginationProvider>
         <AllItems className="entire-items" pageSize={entireItemsPageSize} />
@@ -28,4 +31,4 @@ function App() {
   );
 }
 
-export default App;
+export default ItemsPage;
