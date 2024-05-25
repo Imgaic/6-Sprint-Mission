@@ -2,8 +2,6 @@
   display: flex;
   gap: 4px;
   align-items: center;
-  position: absolute;
-  bottom: 0;
 
   width: fit-content;
 

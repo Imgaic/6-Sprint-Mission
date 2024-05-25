@@ -1,7 +1,10 @@
 .descriptionLayout {
   padding-left: 24px;
-
-  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
 }
 
 .nameAndButtonAligner {
@@ -16,16 +19,6 @@
   color: var(--gray800);
 
   margin-bottom: 16px;
-}
-
-.button {
-  width: 24px;
-  height: 24px;
-
-  background-image: url("../../assets/icons/ic_kebab.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
 }
 
 .price {
@@ -60,4 +53,30 @@
   line-height: 22.4px;
 
   margin-bottom: 24px;
+}
+
+@media all and (max-width: 1199px) {
+  .name {
+    font-size: 20px;
+    line-height: 23.87px;
+
+    margin-bottom: 12px;
+  }
+  .price {
+    font-size: 32px;
+    line-height: 38.19px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .name {
+    font-size: 16px;
+    line-height: 19.09px;
+
+    margin-bottom: 8px;
+  }
+  .price {
+    font-size: 24px;
+    line-height: 28.64px;
+  }
 }

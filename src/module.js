@@ -24,12 +24,12 @@ function isMobile() {
 
 function isTablet() {
   const width = window.innerWidth;
-  return BREAKPOINT.MOBILE < width && width < BREAKPOINT.TABLET;
+  return BREAKPOINT.MOBILE <= width && width < BREAKPOINT.TABLET;
 }
 
 function isDesktop() {
   const width = window.innerWidth;
-  return width > BREAKPOINT.TABLET;
+  return width >= BREAKPOINT.TABLET;
 }
 
 function calculatePageSize(type) {

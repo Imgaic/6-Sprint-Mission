@@ -3,6 +3,12 @@
   margin: 24px 0;
 }
 
+.alignKebab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .comment {
   font-size: 16px;
   font-weight: 400;

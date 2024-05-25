@@ -1,10 +1,15 @@
 import { elapsedTime } from "../../calculateTimeDifference";
+import { isMobile, isTablet } from "../../module";
+import Kebab from "../Kebab";
 import styles from "./styles.module.css";
 
 function Comment({ comment }) {
   return (
     <div className={styles.layout}>
-      <div className={styles.comment}>{comment.content}</div>
+      <div className={styles.alignKebab}>
+        <div className={styles.comment}>{comment.content}</div>
+        {(isTablet() || isMobile()) && <Kebab />}
+      </div>
       <div className={styles.aligner}>
         <img
           className={styles.profileImage}
