@@ -1,8 +1,8 @@
 import Header from "../components/Header";
 import LoginLink from "../components/LoginLink";
-import ProductDetail from "../components/ProductDetail";
+import ProductDetail from "../components/ui/ProductDetail";
 
-function ProductDetailPage(props) {
+function ProductDetailPage() {
   return (
     <>
       <Header>
