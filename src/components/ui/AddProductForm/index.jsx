@@ -31,7 +31,7 @@ function AddProductForm({
       <div>
         <form className={styles.formLayout}>
           <div>
-            <div className={styles.label}>상품 이미지</div>
+            <label className={styles.label}>상품 이미지</label>
             <AddProductImageContainer />
           </div>
           <div>
