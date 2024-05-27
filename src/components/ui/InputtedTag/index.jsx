@@ -9,7 +9,12 @@ function Tag({ tag, onDelete }) {
   return (
     <span className={styles.tagBox}>
       {tag}
-      <img src={xIcon} onClick={handleDeleteClick} alt="x-icon"></img>
+      <img
+        className={styles.xButton}
+        src={xIcon}
+        onClick={handleDeleteClick}
+        alt="x-icon"
+      ></img>
     </span>
   );
 }

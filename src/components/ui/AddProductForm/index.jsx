@@ -6,17 +6,25 @@ import Textarea from "../Textarea";
 import styles from "./styles.module.css";
 
 function AddProductForm({
-  isDisabled,
+  collectedInfo,
   tags,
-  handleChange,
+  handleInputChange,
+  handleTagInputChange,
   handleKeyUp,
   handleDelete,
+  inputTagValue,
 }) {
+  const { name, introduction, price } = collectedInfo;
+
   return (
     <div className={styles.layout}>
       <div className={styles.buttonAligner}>
         <h2 className={styles.subHeading}>상품 등록하기</h2>
-        <Button type="button" className="button" isDisabled={isDisabled}>
+        <Button
+          type="button"
+          className="button"
+          isDisabled={!(name && introduction && price && tags.length)}
+        >
           등록
         </Button>
       </div>
@@ -34,7 +42,7 @@ function AddProductForm({
               className="input"
               id="name"
               placeholder="상품명을 입력해주세요"
-              onChange={handleChange}
+              onChange={handleInputChange}
             />
           </div>
           <div>
@@ -45,7 +53,7 @@ function AddProductForm({
               className="addProductPage"
               id="introduction"
               placeholder="상품 소개를 입력해주세요"
-              onChange={handleChange}
+              onChange={handleInputChange}
             />
           </div>
           <div>
@@ -56,7 +64,7 @@ function AddProductForm({
               className="input"
               id="price"
               placeholder="판매 가격을 입력해주세요"
-              onChange={handleChange}
+              onChange={handleInputChange}
             />
           </div>
           <div>
@@ -68,7 +76,9 @@ function AddProductForm({
               placeholder="태그를 입력해주세요"
               onKeyUp={handleKeyUp}
               onDelete={handleDelete}
+              onChange={handleTagInputChange}
               tags={tags}
+              value={inputTagValue}
             />
           </div>
         </form>

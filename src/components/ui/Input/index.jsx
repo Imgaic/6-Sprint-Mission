@@ -6,6 +6,7 @@ function Input({
   placeholder,
   onChange = null,
   onKeyUp = null,
+  value,
 }) {
   return (
     <input
@@ -15,6 +16,7 @@ function Input({
       placeholder={placeholder}
       onChange={onChange}
       onKeyUp={onKeyUp}
+      value={value}
     ></input>
   );
 }

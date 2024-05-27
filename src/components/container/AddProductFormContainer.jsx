@@ -1,21 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import AddProductForm from "../ui/AddProductForm";
 
 function AddProductFormContainer() {
-  const [isDisabled, setIsDisabled] = useState(true);
   const [tags, setTags] = useState([]);
+  const [inputTagValue, setInputTagValue] = useState("");
   const [collectedInfo, setCollectedInfo] = useState({
     name: "",
     introduction: "",
     price: "",
   });
 
-  const handleChange = (e) => {
-    setCollectedInfo({
-      ...collectedInfo,
-      [e.target.name]: e.target.value,
-    });
+  const handleInputChange = (e) => {
+    setCollectedInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleTagInputChange = (e) => {
+    setInputTagValue(e.target.value);
   };
 
   const handleKeyUp = (e) => {
@@ -25,7 +26,7 @@ function AddProductFormContainer() {
       !tags.find((tag) => tag === e.target.value)
     ) {
       setTags((prevTags) => [e.target.value, ...prevTags]);
-      e.target.value = "";
+      setInputTagValue("");
     }
   };
 
@@ -33,26 +34,15 @@ function AddProductFormContainer() {
     setTags((prevTags) => prevTags.filter((tag) => tagName !== tag));
   };
 
-  useEffect(() => {
-    console.log(collectedInfo);
-    console.log(collectedInfo.name);
-    collectedInfo.name &&
-    collectedInfo.introduction &&
-    collectedInfo.price &&
-    tags.length
-      ? setIsDisabled(false)
-      : setIsDisabled(true);
-  }, [collectedInfo, tags]);
-
-  console.log(isDisabled);
-
   return (
     <AddProductForm
-      isDisabled={isDisabled}
+      collectedInfo={collectedInfo}
       tags={tags}
-      handleChange={handleChange}
+      handleInputChange={handleInputChange}
+      handleTagInputChange={handleTagInputChange}
       handleKeyUp={handleKeyUp}
       handleDelete={handleDelete}
+      inputTagValue={inputTagValue}
     />
   );
 }
