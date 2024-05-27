@@ -1,5 +1,5 @@
-import { elapsedTime } from "../../../calculateTimeDifference";
-import { isMobile, isTablet } from "../../../module";
+import { elapsedTime } from "../../../utils/calculateTimeDifference";
+import { isMobile, isTablet } from "../../../utils/module";
 import Kebab from "../Kebab";
 import styles from "./styles.module.css";
 

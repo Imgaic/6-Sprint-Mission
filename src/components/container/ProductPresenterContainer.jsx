@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getProduct } from "../../api";
+import { getProduct } from "../../api/api";
 import ProductPresenter from "../ui/ProductPresenter";
 
 function ProductPresenterContainer() {

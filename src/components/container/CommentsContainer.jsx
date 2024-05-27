@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getComments } from "../../api";
+import { getComments } from "../../api/api";
 import Comments from "../ui/Comments";
 
 function CommentsContainer(props) {

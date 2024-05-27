@@ -1,5 +1,8 @@
 import AddProductImageContainer from "../../container/AddProductImageContainer";
 import Button from "../Button";
+import Input from "../Input";
+import InputTag from "../InputTag";
+import Textarea from "../Textarea";
 import styles from "./styles.module.css";
 
 function AddProductForm({
@@ -13,7 +16,7 @@ function AddProductForm({
     <div className={styles.layout}>
       <div className={styles.buttonAligner}>
         <h2 className={styles.subHeading}>상품 등록하기</h2>
-        <Button type="button" className={"button"} disabled={isDisabled}>
+        <Button type="button" className="button" isDisabled={isDisabled}>
           등록
         </Button>
       </div>
@@ -23,33 +26,51 @@ function AddProductForm({
             <div className={styles.label}>상품 이미지</div>
             <AddProductImageContainer />
           </div>
-          <InputContainer
-            id="name"
-            label="상품명"
-            placeholder="상품명을 입력해주세요"
-            onChange={handleChange}
-          />
-          <InputContainer
-            id="introduction"
-            label="상품 소개"
-            type="textarea"
-            placeholder="상품 소개를 입력해주세요"
-            onChange={handleChange}
-          />
-          <InputContainer
-            id="price"
-            label="판매가격"
-            placeholder="판매 가격을 입력해주세요"
-            onChange={handleChange}
-          />
-          <InputTag
-            id="tags"
-            label="태그"
-            placeholder="태그를 입력해주세요"
-            onKeyUp={handleKeyUp}
-            onDelete={handleDelete}
-            tags={tags}
-          />
+          <div>
+            <label htmlFor="name" className={styles.label}>
+              상품명
+            </label>
+            <Input
+              className="input"
+              id="name"
+              placeholder="상품명을 입력해주세요"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="introduction" className={styles.label}>
+              상품 소개
+            </label>
+            <Textarea
+              className="addProductPage"
+              id="introduction"
+              placeholder="상품 소개를 입력해주세요"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="price" className={styles.label}>
+              판매 가격
+            </label>
+            <Input
+              className="input"
+              id="price"
+              placeholder="판매 가격을 입력해주세요"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label htmlFor="tags" className={styles.label}>
+              태그
+            </label>
+            <InputTag
+              id="tags"
+              placeholder="태그를 입력해주세요"
+              onKeyUp={handleKeyUp}
+              onDelete={handleDelete}
+              tags={tags}
+            />
+          </div>
         </form>
       </div>
     </div>

@@ -33,6 +33,8 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--gray800);
+
+  display: block;
 }
 
 @media (max-width: 1199px) {

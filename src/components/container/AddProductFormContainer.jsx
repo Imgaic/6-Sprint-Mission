@@ -34,6 +34,8 @@ function AddProductFormContainer() {
   };
 
   useEffect(() => {
+    console.log(collectedInfo);
+    console.log(collectedInfo.name);
     collectedInfo.name &&
     collectedInfo.introduction &&
     collectedInfo.price &&
@@ -41,6 +43,8 @@ function AddProductFormContainer() {
       ? setIsDisabled(false)
       : setIsDisabled(true);
   }, [collectedInfo, tags]);
+
+  console.log(isDisabled);
 
   return (
     <AddProductForm

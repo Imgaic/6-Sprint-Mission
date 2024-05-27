@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { postComment } from "../../api";
+import { postComment } from "../../api/api";
 import AddComment from "../ui/AddComment";
 
 function AddCommentContainer({ setIsAdded }) {
