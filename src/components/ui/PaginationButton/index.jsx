@@ -1,16 +1,16 @@
 import styles from "./styles.module.css";
 
-function Button({ children, className, isDisabled, onClick }) {
+function PaginationButton({ children, id, className = "", onClick }) {
   return (
     <button
+      id={id}
       className={`${styles.button} ${styles[className]}`}
-      disabled={isDisabled}
-      onClick={onClick}
       type="button"
+      onClick={onClick}
     >
       {children}
     </button>
   );
 }
 
-export default Button;
+export default PaginationButton;

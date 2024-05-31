@@ -1,0 +1,8 @@
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  margin: 40px 0px 100px;
+}

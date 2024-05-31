@@ -10,6 +10,14 @@
   cursor: pointer;
 }
 
+.login {
+  flex-shrink: 0;
+}
+
+.addItem {
+  text-wrap: nowrap;
+}
+
 .button:hover {
   background-color: #1251aa;
 }

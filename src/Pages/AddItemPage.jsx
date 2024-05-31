@@ -1,13 +1,13 @@
-import Header from "../components/Header";
 import AddProductFormContainer from "../components/container/AddProductFormContainer";
 import AuthenticatedProfileButton from "../components/ui/AuthenticatedProfileButton";
+import Nav from "../components/ui/Nav";
 
 function AddItemPage() {
   return (
     <>
-      <Header>
+      <Nav>
         <AuthenticatedProfileButton />
-      </Header>
+      </Nav>
       <AddProductFormContainer />
     </>
   );

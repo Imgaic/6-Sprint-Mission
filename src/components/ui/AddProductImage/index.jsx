@@ -4,7 +4,7 @@ import xButtonIcon from "../../../assets/icons/ic_X_blue.svg";
 import plusIcon from "../../../assets/icons/ic_plus.svg";
 import styles from "./styles.module.css";
 
-const ShowUploadedImage = styled.div`
+const ImagePreview = styled.div`
   display: block;
   position: relative;
   width: 282px;
@@ -27,7 +27,7 @@ function AddProductImage({ preview, value, handleChange, handleDeleteClick }) {
     <div className={styles.flexedImage}>
       <label className={styles.imageInputBox}>
         <div className={styles.imageInputDesign}>
-          <img className={styles.plusIcon} src={plusIcon}></img>
+          <img className={styles.plusIcon} src={plusIcon} alt="plusIcon"></img>
           <h5 className={styles.phrase}>이미지 등록</h5>
         </div>
         <input
@@ -38,13 +38,14 @@ function AddProductImage({ preview, value, handleChange, handleDeleteClick }) {
         ></input>
       </label>
       {value && (
-        <ShowUploadedImage $imageURL={preview}>
+        <ImagePreview $imageURL={preview}>
           <img
             className={styles.xButtonIcon}
             src={xButtonIcon}
             onClick={handleDeleteClick}
+            alt="xButtonIcon"
           />
-        </ShowUploadedImage>
+        </ImagePreview>
       )}
     </div>
   );

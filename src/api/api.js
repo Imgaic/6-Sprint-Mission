@@ -14,7 +14,7 @@ function fetcher(order, page, pageSize) {
   return url;
 }
 
-export async function getItems({ order, page = "1", pageSize = "10" }) {
+async function getProductList({ order, page = "1", pageSize = "10" }) {
   try {
     const url = fetcher(order, page, pageSize);
     const response = await fetch(url);
@@ -100,4 +100,4 @@ const getComments = async ({ productId, limit }) => {
   return body.list;
 };
 
-export { getProduct, postComment, getComments };
+export { getProductList, getProduct, postComment, getComments };

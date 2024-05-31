@@ -15,11 +15,7 @@ function AddComment({ content, isDisabled, handleClick, handleChange }) {
           id="commentContent"
         />
       </div>
-      <Button
-        className="button"
-        isDisabled={isDisabled}
-        handleClick={handleClick}
-      >
+      <Button className="button" isDisabled={isDisabled} onClick={handleClick}>
         등록
       </Button>
     </div>

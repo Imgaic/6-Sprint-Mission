@@ -1,0 +1,14 @@
+.bestItems__nameTag {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray900);
+  line-height: 28px;
+}
+
+.bestItems__layout {
+  margin-top: 16px;
+
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
+}
