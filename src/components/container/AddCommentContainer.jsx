@@ -25,10 +25,6 @@ function AddCommentContainer({ setIsAdded }) {
     }
   };
 
-  const handleClick = () => {
-    sendComment(id, content);
-  };
-
   const handleChange = (e) => {
     setContent(e.target.value);
     if (e.target.value) {
@@ -42,7 +38,7 @@ function AddCommentContainer({ setIsAdded }) {
     <AddComment
       content={content}
       isDisabled={isDisabled}
-      handleClick={handleClick}
+      handleClick={() => sendComment(id, content)}
       handleChange={handleChange}
     />
   );

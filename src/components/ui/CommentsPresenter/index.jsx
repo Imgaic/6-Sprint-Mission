@@ -5,11 +5,7 @@ import styles from "./styles.module.css";
 function CommentsPresenter({ comments }) {
   return (
     <div className={styles.layout}>
-      {comments.length !== 0 ? (
-        comments.map((comment) => (
-          <Comment comment={comment} key={comment.id} />
-        ))
-      ) : (
+      {comments.length === 0 ? (
         <div className={styles.empty}>
           <img
             className={styles.emptyImage}
@@ -18,6 +14,10 @@ function CommentsPresenter({ comments }) {
           />
           <div className={styles.emptyInfo}>아직 문의가 없습니다.</div>
         </div>
+      ) : (
+        comments.map((comment) => (
+          <Comment comment={comment} key={comment.id} />
+        ))
       )}
     </div>
   );

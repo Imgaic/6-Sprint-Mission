@@ -26,10 +26,9 @@ function CommentsContainer(props) {
   useEffect(() => {
     loadComments(id, 3);
     if (isAdded) {
-      loadComments(id, 3);
       setIsAdded(false);
     }
-  }, [isAdded]);
+  }, [id, isAdded]);
 
   return (
     !errorMessage && <Comments comments={comments} setIsAdded={setIsAdded} />

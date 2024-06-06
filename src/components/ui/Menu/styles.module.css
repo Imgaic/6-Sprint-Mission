@@ -1,0 +1,18 @@
+.menu {
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--gray600);
+  display: block;
+  margin-right: 40px;
+}
+
+.active {
+  color: var(--blue);
+}
+
+@media (max-width: 743px) {
+  .menu {
+    margin-right: 8px;
+  }
+}

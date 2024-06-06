@@ -2,9 +2,9 @@ import { useNavigate } from "react-router-dom";
 
 import Button from "../components/ui/Button";
 import Nav from "../components/ui/Nav";
-import ProductDetail from "../components/ui/ProductDetail";
+import ProductList from "../components/ui/ProductList";
 
-function ProductDetailPage() {
+function ProductListPage() {
   const navigate = useNavigate();
 
   return (
@@ -14,9 +14,9 @@ function ProductDetailPage() {
           로그인
         </Button>
       </Nav>
-      <ProductDetail />
+      <ProductList />
     </>
   );
 }
 
-export default ProductDetailPage;
+export default ProductListPage;

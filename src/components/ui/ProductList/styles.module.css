@@ -1,0 +1,20 @@
+.layout {
+  margin: 24px auto 0;
+  max-width: 1201px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    max-width: 696px;
+  }
+}
+
+@media (max-width: 743px) {
+  .layout {
+    max-width: 344px;
+  }
+}
