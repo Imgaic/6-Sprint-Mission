@@ -26,7 +26,9 @@ function ProductPresenterContainer() {
     loadProduct();
   }, []);
 
-  return !errorMessage && <ProductPresenter product={product} />;
+  if (errorMessage) return;
+
+  return <ProductPresenter product={product} />;
 }
 
 export default ProductPresenterContainer;

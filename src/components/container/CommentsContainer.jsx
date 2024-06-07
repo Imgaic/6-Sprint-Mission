@@ -30,9 +30,9 @@ function CommentsContainer(props) {
     }
   }, [id, isAdded]);
 
-  return (
-    !errorMessage && <Comments comments={comments} setIsAdded={setIsAdded} />
-  );
+  if (errorMessage) return;
+
+  return <Comments comments={comments} setIsAdded={setIsAdded} />;
 }
 
 export default CommentsContainer;

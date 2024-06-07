@@ -48,16 +48,16 @@ function EntireProductListContainer(props) {
     }
   };
 
+  if (errorMessage) return;
+
   return (
-    !errorMessage && (
-      <EntireProductList
-        products={products}
-        order={order}
-        page={page}
-        handleOrderClick={handleOrderClick}
-        handlePaginationClick={handlePaginationClick}
-      />
-    )
+    <EntireProductList
+      products={products}
+      order={order}
+      page={page}
+      handleOrderClick={handleOrderClick}
+      handlePaginationClick={handlePaginationClick}
+    />
   );
 }
 

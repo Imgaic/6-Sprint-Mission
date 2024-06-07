@@ -30,7 +30,9 @@ function BestProductsContainer() {
     });
   }, [pageSize]);
 
-  return !errorMessage && <BestProducts products={products} />;
+  if (errorMessage) return;
+
+  return <BestProducts products={products} />;
 }
 
 export default BestProductsContainer;
