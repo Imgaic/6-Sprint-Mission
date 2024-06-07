@@ -1,5 +1,5 @@
-import Input from "../Input";
-import Tag from "../InputtedTag";
+import Input from "@ui/Input";
+import Tag from "@ui/InputtedTag";
 import styles from "./styles.module.css";
 
 function InputTag({

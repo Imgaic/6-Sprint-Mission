@@ -1,4 +1,4 @@
-import xIcon from "../../../assets/icons/ic_X.svg";
+import xIcon from "@assets/icons/ic_X.svg";
 import styles from "./styles.module.css";
 
 function Tag({ tag, onDelete }) {

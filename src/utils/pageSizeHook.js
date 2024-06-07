@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-import { calculatePageSize } from "./screenSize";
+import { calculatePageSize } from "@utils/screenSize";
 
 export default function usePageSize(type) {
   const [pageSize, setPageSize] = useState(() => calculatePageSize(type));

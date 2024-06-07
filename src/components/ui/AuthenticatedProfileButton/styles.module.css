@@ -4,5 +4,5 @@
   background-color: var(--white);
   cursor: pointer;
 
-  background-image: url("../../../assets/icons/ic_user.svg");
+  background-image: url("@assets/icons/ic_user.svg");
 }

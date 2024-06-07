@@ -16,7 +16,7 @@
   color: var(--gray800);
 
   background-color: var(--white);
-  background-image: url("../../../assets/icons/ic_arrow_down.svg");
+  background-image: url("@assets/icons/ic_arrow_down.svg");
   background-repeat: no-repeat;
   background-position: 85%;
 
@@ -80,7 +80,7 @@
   }
   .allItems__orderSelect {
     width: 42px;
-    background-image: url("../../../assets/icons/ic_sort.svg");
+    background-image: url("@assets/icons/ic_sort.svg");
     background-position: center;
   }
 }

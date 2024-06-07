@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-import { getComments } from "../../api/api";
-import Comments from "../ui/Comments";
+import Comments from "@ui/Comments";
+import { getComments } from "@api/api";
 
 function CommentsContainer(props) {
   const [comments, setComments] = useState([]);

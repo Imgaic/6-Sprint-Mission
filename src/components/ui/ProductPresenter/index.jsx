@@ -1,5 +1,5 @@
-import ProductDescription from "../ProductDescription";
-import ProductImage from "../ProductImage";
+import ProductDescription from "@ui/ProductDescription";
+import ProductImage from "@ui/ProductImage";
 import styles from "./styles.module.css";
 
 function ProductPresenter({ product }) {

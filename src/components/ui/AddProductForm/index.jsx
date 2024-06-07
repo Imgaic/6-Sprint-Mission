@@ -1,8 +1,8 @@
-import AddProductImageContainer from "../../container/AddProductImageContainer";
-import Button from "../Button";
-import Input from "../Input";
-import InputTag from "../InputTag";
-import Textarea from "../Textarea";
+import AddProductImageContainer from "@container/AddProductImageContainer";
+import Button from "@ui/Button";
+import Input from "@ui/Input";
+import InputTag from "@ui/InputTag";
+import Textarea from "@ui/Textarea";
 import styles from "./styles.module.css";
 
 function AddProductForm({

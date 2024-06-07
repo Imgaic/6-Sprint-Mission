@@ -1,5 +1,5 @@
-import Logo from "../Logo";
-import Menus from "../Menus";
+import Logo from "@ui/Logo";
+import Menus from "@ui/Menus";
 import styles from "./styles.module.css";
 
 function Nav({ children }) {

@@ -1,5 +1,5 @@
-import emptyCommentImage from "../../../assets/comment_empty.png";
-import Comment from "../Comment";
+import Comment from "@ui/Comment";
+import emptyCommentImage from "@assets/comment_empty.png";
 import styles from "./styles.module.css";
 
 function CommentsPresenter({ comments }) {

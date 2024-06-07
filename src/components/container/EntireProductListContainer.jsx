@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-
-import { getProductList } from "../../api/api";
-import usePageSize from "../../utils/pageSizeHook";
-import EntireProductList from "../ui/EntireProductList";
+import EntireProductList from "@ui/EntireProductList";
+import { getProductList } from "@api/api";
+import usePageSize from "@utils/pageSizeHook";
 
 function EntireProductListContainer(props) {
   const [products, setProducts] = useState([]);

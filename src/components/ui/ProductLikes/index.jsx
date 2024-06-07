@@ -1,4 +1,4 @@
-import heartIcon from "../../../assets/icons/ic_heart.svg";
+import heartIcon from "@assets/icons/ic_heart.svg";
 import styles from "./styles.module.css";
 
 function ProductLikes({ likes }) {

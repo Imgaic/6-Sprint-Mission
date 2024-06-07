@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-
-import { getProductList } from "../../api/api";
-import usePageSize from "../../utils/pageSizeHook";
-import BestProducts from "../ui/BestProducts";
+import BestProducts from "@ui/BestProducts";
+import { getProductList } from "@api/api";
+import usePageSize from "@utils/pageSizeHook";
 
 function BestProductsContainer() {
   const [products, setProducts] = useState([]);

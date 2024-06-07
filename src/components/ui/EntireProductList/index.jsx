@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
-
-import searchIcon from "../../../assets/icons/ic_search.svg";
-import { isDesktop } from "../../../utils/screenSize";
-import DropdownContainer from "../../container/DropdownContainer";
-import Button from "../Button";
-import Pagination from "../Pagination";
-import ProductCard from "../ProductCard";
+import DropdownContainer from "@container/DropdownContainer";
+import Button from "@ui/Button";
+import Pagination from "@ui/Pagination";
+import ProductCard from "@ui/ProductCard";
+import { isDesktop } from "@utils/screenSize";
+import searchIcon from "@assets/icons/ic_search.svg";
 import styles from "./styles.module.css";
 
 function EntireProductList({

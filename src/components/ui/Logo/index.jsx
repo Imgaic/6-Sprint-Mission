@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-
-import logo from "../../../assets/logo.png";
-import logo_mobile from "../../../assets/logo_mobile.png";
+import logo from "@assets/logo.png";
+import logo_mobile from "@assets/logo_mobile.png";
 import styles from "./styles.module.css";
 
 function Logo() {

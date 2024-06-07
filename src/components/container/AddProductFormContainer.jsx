@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-import AddProductForm from "../ui/AddProductForm";
+import AddProductForm from "@ui/AddProductForm";
 
 function AddProductFormContainer() {
   const [tags, setTags] = useState([]);

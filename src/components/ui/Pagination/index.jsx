@@ -1,6 +1,6 @@
-import leftArrowIcon from "../../../assets/icons/ic_arrow_left.svg";
-import rightArrowIcon from "../../../assets/icons/ic_arrow_right.svg";
-import PaginationButton from "../PaginationButton";
+import PaginationButton from "@ui/PaginationButton";
+import leftArrowIcon from "@assets/icons/ic_arrow_left.svg";
+import rightArrowIcon from "@assets/icons/ic_arrow_right.svg";
 import styles from "./styles.module.css";
 
 function Pagination({ page, handlePaginationClick }) {

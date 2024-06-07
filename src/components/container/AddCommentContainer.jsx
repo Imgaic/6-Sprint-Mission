@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-
-import { postComment } from "../../api/api";
-import AddComment from "../ui/AddComment";
+import AddComment from "@ui/AddComment";
+import { postComment } from "@api/api";
 
 function AddCommentContainer({ setIsAdded }) {
   const [content, setContent] = useState("");

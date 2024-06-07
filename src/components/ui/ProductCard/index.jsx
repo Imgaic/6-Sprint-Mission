@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
-import heartIcon from "../../../assets/icons/ic_heart.svg";
+import heartIcon from "@assets/icons/ic_heart.svg";
 import styles from "./styles.module.css";
 
 function ProductCard({ product, type }) {

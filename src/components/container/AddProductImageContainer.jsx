@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-
-import AddProductImage from "../ui/AddProductImage";
+import AddProductImage from "@ui/AddProductImage";
 
 function AddProductImageContainer() {
   const [preview, setPreview] = useState(null);

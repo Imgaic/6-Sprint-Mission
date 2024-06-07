@@ -1,7 +1,6 @@
 import styled from "styled-components";
-
-import xButtonIcon from "../../../assets/icons/ic_X_blue.svg";
-import plusIcon from "../../../assets/icons/ic_plus.svg";
+import xButtonIcon from "@assets/icons/ic_X_blue.svg";
+import plusIcon from "@assets/icons/ic_plus.svg";
 import styles from "./styles.module.css";
 
 const ImagePreview = styled.div`

@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-import Dropdown from "../ui/Dropdown";
+import Dropdown from "@ui/Dropdown";
 
 function DropdownContainer({ order, handleOrderClick }) {
   const [isOpen, setIsOpen] = useState(false);

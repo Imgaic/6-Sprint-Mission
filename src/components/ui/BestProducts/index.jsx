@@ -1,4 +1,4 @@
-import ProductCard from "../ProductCard";
+import ProductCard from "@ui/ProductCard";
 import styles from "./styles.module.css";
 
 function BestProducts({ products }) {

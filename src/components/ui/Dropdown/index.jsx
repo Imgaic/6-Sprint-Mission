@@ -1,4 +1,4 @@
-import { isMobile } from "../../../utils/screenSize";
+import { isMobile } from "@utils/screenSize";
 import styles from "./styles.module.css";
 
 function Dropdown({ isOpen, order, handleToggleClick, handleOrderClick }) {

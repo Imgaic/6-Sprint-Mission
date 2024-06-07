@@ -1,6 +1,6 @@
-import Kebab from "../Kebab";
-import ProductLikes from "../ProductLikes";
-import ProductTag from "../ProductTag";
+import Kebab from "@ui/Kebab";
+import ProductLikes from "@ui/ProductLikes";
+import ProductTag from "@ui/ProductTag";
 import styles from "./styles.module.css";
 
 function ProductDescription({ product }) {

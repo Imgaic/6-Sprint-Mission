@@ -1,6 +1,6 @@
-import AddProductFormContainer from "../components/container/AddProductFormContainer";
-import AuthenticatedProfileButton from "../components/ui/AuthenticatedProfileButton";
-import Nav from "../components/ui/Nav";
+import AddProductFormContainer from "@container/AddProductFormContainer";
+import AuthenticatedProfileButton from "@ui/AuthenticatedProfileButton";
+import Nav from "@ui/Nav";
 
 function AddItemPage() {
   return (
