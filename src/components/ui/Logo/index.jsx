@@ -7,12 +7,12 @@ function Logo() {
   return (
     <Link to="/">
       <img
-        className={`${styles.logo__image} ${styles.logo__desktop}`}
+        className={`${styles.image} ${styles.desktop}`}
         src={logo}
         alt="판다마켓 로고"
       ></img>
       <img
-        className={`${styles.logo__image} ${styles.logo__mobile}`}
+        className={`${styles.image} ${styles.mobile}`}
         src={logo_mobile}
         alt="판다마켓 모바일 로고"
       ></img>

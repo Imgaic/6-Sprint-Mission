@@ -17,17 +17,17 @@ function EntireProductList({
   const navigate = useNavigate();
   return (
     <div>
-      <div className={styles.allItems__container}>
-        <h2 className={styles.allItems__nameTag}>
+      <div className={styles.container}>
+        <h2 className={styles.nameTag}>
           {isDesktop() ? "전체 상품" : "판매 중인 상품"}
         </h2>
-        <div className={styles.allItems__searchContainer}>
-          <label htmlFor="search" className={styles.allItems__searchIcon}>
+        <div className={styles.searchContainer}>
+          <label htmlFor="search" className={styles.searchIcon}>
             <img src={searchIcon} alt="search"></img>
           </label>
           <input
             id="search"
-            className={styles.allItems__search}
+            className={styles.search}
             placeholder="검색할 상품을 입력해주세요"
           ></input>
         </div>
@@ -36,7 +36,7 @@ function EntireProductList({
         </Button>
         <DropdownContainer order={order} handleOrderClick={handleOrderClick} />
       </div>
-      <div className={styles.allItems__layout}>
+      <div className={styles.layout}>
         {products.length !== 0 &&
           products.map((product) => {
             return (

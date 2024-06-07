@@ -6,7 +6,9 @@ function ProductCard({ product, type }) {
   const navigate = useNavigate();
   const { id, images, name, price, favoriteCount } = product;
   const itemType =
-    type === "best" ? "bestItems__imgContainer" : "allItems__imgContainer";
+    type === "best"
+      ? "bestProducts__imgContainer"
+      : "entireProduct__imgContainer";
 
   return (
     <div
@@ -14,16 +16,14 @@ function ProductCard({ product, type }) {
       onClick={() => navigate(`/items/${id}`)}
     >
       <div className={styles[itemType]}>
-        <img className={styles.item__img} src={images[0]} alt="item"></img>
+        <img className={styles.image} src={images[0]} alt="item"></img>
       </div>
-      <div className={styles.item__descriptionContainer}>
-        <div className={styles.item__name}>{name}</div>
-        <div
-          className={styles.item__price}
-        >{`${price.toLocaleString()}원`}</div>
-        <div className={styles.item__favoriteContainer}>
+      <div className={styles.descriptionContainer}>
+        <div className={styles.name}>{name}</div>
+        <div className={styles.price}>{`${price.toLocaleString()}원`}</div>
+        <div className={styles.favoriteContainer}>
           <img src={heartIcon} alt="heart-icon"></img>
-          <div className={styles.item__favoriteCount}>{favoriteCount}</div>
+          <div className={styles.favoriteCount}>{favoriteCount}</div>
         </div>
       </div>
     </div>

@@ -1,21 +1,21 @@
-.logo__image {
+.image {
   display: block;
   width: 153px;
   height: 51px;
 }
 
 @media (min-width: 744px) {
-  .logo__mobile {
+  .mobile {
     display: none;
   }
 }
 
 @media (max-width: 743px) {
-  .logo__image {
+  .image {
     width: 81px;
     height: 40px;
   }
-  .logo__desktop {
+  .desktop {
     display: none;
   }
 }

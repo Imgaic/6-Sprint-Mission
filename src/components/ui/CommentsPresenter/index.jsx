@@ -4,15 +4,15 @@ import styles from "./styles.module.css";
 
 function CommentsPresenter({ comments }) {
   return (
-    <div className={styles.layout}>
+    <div>
       {comments.length === 0 ? (
-        <div className={styles.empty}>
+        <div className={styles.layout}>
           <img
-            className={styles.emptyImage}
+            className={styles.image}
             src={emptyCommentImage}
             alt="문의가 없습니다."
           />
-          <div className={styles.emptyInfo}>아직 문의가 없습니다.</div>
+          <div className={styles.info}>아직 문의가 없습니다.</div>
         </div>
       ) : (
         comments.map((comment) => (
