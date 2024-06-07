@@ -8,11 +8,20 @@ function EntireProductListContainer(props) {
   const [products, setProducts] = useState([]);
   const [order, setOrder] = useState("recent");
   const [page, setPage] = useState("1");
+  const [errorMessage, setErrorMessage] = useState("");
   const pageSize = usePageSize("entire");
 
   const loadProducts = async (options) => {
-    const { list } = await getProductList(options);
-    setProducts(list);
+    try {
+      const list = await getProductList(options);
+      setProducts(list);
+    } catch (error) {
+      if (error.name === "TypeError") {
+        setErrorMessage("네트워크를 확인하세요");
+      } else if (error.name === "HttpError") {
+        setErrorMessage(error.status);
+      }
+    }
   };
 
   useEffect(() => {
@@ -40,13 +49,15 @@ function EntireProductListContainer(props) {
   };
 
   return (
-    <EntireProductList
-      products={products}
-      order={order}
-      page={page}
-      handleOrderClick={handleOrderClick}
-      handlePaginationClick={handlePaginationClick}
-    />
+    !errorMessage && (
+      <EntireProductList
+        products={products}
+        order={order}
+        page={page}
+        handleOrderClick={handleOrderClick}
+        handlePaginationClick={handlePaginationClick}
+      />
+    )
   );
 }
 
