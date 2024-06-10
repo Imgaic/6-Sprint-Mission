@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 function ProductCard({ product, type }) {
   const navigate = useNavigate();
   const { id, images, name, price, favoriteCount } = product;
-  const itemType =
+  const productType =
     type === "best"
       ? "bestProducts__imgContainer"
       : "entireProduct__imgContainer";
@@ -15,7 +15,7 @@ function ProductCard({ product, type }) {
       className={styles.productCard}
       onClick={() => navigate(`/items/${id}`)}
     >
-      <div className={styles[itemType]}>
+      <div className={styles[productType]}>
         <img className={styles.image} src={images[0]} alt="상품"></img>
       </div>
       <div className={styles.descriptionContainer}>
