@@ -1,4 +1,3 @@
-import PaginationButton from "@ui/PaginationButton";
 import leftArrowIcon from "@assets/icons/ic_arrow_left.svg";
 import rightArrowIcon from "@assets/icons/ic_arrow_right.svg";
 import styles from "./styles.module.css";
@@ -31,6 +30,19 @@ function Pagination({ page, handlePaginationClick }) {
         <img src={rightArrowIcon} alt="right arrow"></img>
       </PaginationButton>
     </div>
+  );
+}
+
+function PaginationButton({ children, id, className = "", onClick }) {
+  return (
+    <button
+      id={id}
+      className={`${styles.button} ${styles[className]}`}
+      type="button"
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 }
 
