@@ -1,13 +1,14 @@
-import { Link } from "react-router-dom";
+import MenuItem from "@ui/MenuItem";
 import styles from "./styles.module.css";
 
-function Menu({ link, name, className }) {
+function Menu() {
   return (
-    <li>
-      <Link to={link} className={`${styles.menu} ${styles[className]}`}>
-        {name}
-      </Link>
-    </li>
+    <div>
+      <menu className={styles.aligner}>
+        <MenuItem link="/" name="자유게시판" />
+        <MenuItem link="/items" name="중고마켓" className="active" />
+      </menu>
+    </div>
   );
 }
 

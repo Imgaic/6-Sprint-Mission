@@ -1,5 +1,5 @@
 import Logo from "@ui/Logo";
-import Menus from "@ui/Menus";
+import Menu from "@ui/Menu";
 import styles from "./styles.module.css";
 
 function Nav({ children }) {
@@ -7,7 +7,7 @@ function Nav({ children }) {
     <div className={styles.header}>
       <div className={styles.container}>
         <Logo />
-        <Menus />
+        <Menu />
       </div>
       {children}
     </div>
