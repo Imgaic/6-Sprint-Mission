@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 function ProductLikes({ likes }) {
   return (
     <div className={styles.likes}>
-      <img className={styles.icon} src={heartIcon} alt="좋아요 수" />
+      <img className={styles.icon} src={heartIcon} alt="heart-shaped" />
       <div className={styles.count}>{likes}</div>
     </div>
   );

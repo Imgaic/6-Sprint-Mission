@@ -16,13 +16,13 @@ function ProductCard({ product, type }) {
       onClick={() => navigate(`/items/${id}`)}
     >
       <div className={styles[itemType]}>
-        <img className={styles.image} src={images[0]} alt="item"></img>
+        <img className={styles.image} src={images[0]} alt="상품"></img>
       </div>
       <div className={styles.descriptionContainer}>
         <div className={styles.name}>{name}</div>
         <div className={styles.price}>{`${price.toLocaleString()}원`}</div>
         <div className={styles.favoriteContainer}>
-          <img src={heartIcon} alt="heart-icon"></img>
+          <img src={heartIcon} alt="heart-shaped"></img>
           <div className={styles.favoriteCount}>{favoriteCount}</div>
         </div>
       </div>

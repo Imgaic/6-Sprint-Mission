@@ -26,7 +26,11 @@ function AddProductImage({ preview, value, handleChange, handleDeleteClick }) {
     <div className={styles.flexedImage}>
       <label className={styles.imageInputBox}>
         <div className={styles.imageInputDesign}>
-          <img className={styles.plusIcon} src={plusIcon} alt="plusIcon"></img>
+          <img
+            className={styles.plusIcon}
+            src={plusIcon}
+            alt="더하기 버튼"
+          ></img>
           <h5 className={styles.phrase}>이미지 등록</h5>
         </div>
         <input
@@ -42,7 +46,7 @@ function AddProductImage({ preview, value, handleChange, handleDeleteClick }) {
             className={styles.xButtonIcon}
             src={xButtonIcon}
             onClick={handleDeleteClick}
-            alt="xButtonIcon"
+            alt="X 버튼"
           />
         </ImagePreview>
       )}

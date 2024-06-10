@@ -23,7 +23,7 @@ function EntireProductList({
         </h2>
         <div className={styles.searchContainer}>
           <label htmlFor="search" className={styles.searchIcon}>
-            <img src={searchIcon} alt="search"></img>
+            <img src={searchIcon} alt="magnifying glasses"></img>
           </label>
           <input
             id="search"

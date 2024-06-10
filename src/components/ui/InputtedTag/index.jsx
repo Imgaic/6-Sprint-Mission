@@ -13,7 +13,7 @@ function Tag({ tag, onDelete }) {
         className={styles.xButton}
         src={xIcon}
         onClick={handleDeleteClick}
-        alt="x-icon"
+        alt="X Button"
       ></img>
     </span>
   );

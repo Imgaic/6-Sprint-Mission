@@ -11,7 +11,7 @@ function Pagination({ page, handlePaginationClick }) {
         className="image"
         onClick={handlePaginationClick}
       >
-        <img src={leftArrowIcon} alt="leftArrow"></img>
+        <img src={leftArrowIcon} alt="left arrow"></img>
       </PaginationButton>
       {["1", "2", "3", "4", "5"].map((num) => {
         return (
@@ -30,7 +30,7 @@ function Pagination({ page, handlePaginationClick }) {
         className="image"
         onClick={handlePaginationClick}
       >
-        <img src={rightArrowIcon} alt="rightArrow"></img>
+        <img src={rightArrowIcon} alt="right arrow"></img>
       </PaginationButton>
     </div>
   );
