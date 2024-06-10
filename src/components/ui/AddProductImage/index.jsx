@@ -15,6 +15,11 @@ const ImagePreview = styled.div`
   background-position: center;
   background-size: contain;
 
+  @media screen and (max-width: 1199px) {
+    width: 162px;
+    height: 162px;
+  }
+
   ${({ $imageURL }) =>
     $imageURL &&
     `background-image: url(${$imageURL})};

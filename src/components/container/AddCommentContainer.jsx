@@ -10,6 +10,7 @@ function AddCommentContainer({ setIsAdded }) {
 
   const sendComment = async (productId, content) => {
     try {
+      setIsDisabled(true);
       await postComment({ productId, content });
       setIsAdded(true);
       setContent("");
