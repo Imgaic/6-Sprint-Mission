@@ -37,10 +37,9 @@ function EntireProductList({
         <DropdownContainer order={order} handleOrderClick={handleOrderClick} />
       </div>
       <div className={styles.layout}>
-        {products.length !== 0 &&
-          products.map((product) => (
-            <ProductCard key={product.id} type="all" product={product} />
-          ))}
+        {products.map((product) => (
+          <ProductCard key={product.id} type="all" product={product} />
+        ))}
       </div>
       <Pagination page={page} handlePaginationClick={handlePaginationClick} />
     </div>
