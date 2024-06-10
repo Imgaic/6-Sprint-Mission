@@ -23,9 +23,7 @@ function InputTag({
       />
       <div className={styles.tagsPresenter}>
         {tags.length !== 0 &&
-          tags.map((tag) => {
-            return <Tag tag={tag} key={tag} onDelete={onDelete} />;
-          })}
+          tags.map((tag) => <Tag tag={tag} key={tag} onDelete={onDelete} />)}
       </div>
     </div>
   );

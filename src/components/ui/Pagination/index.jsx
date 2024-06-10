@@ -13,18 +13,16 @@ function Pagination({ page, handlePaginationClick }) {
       >
         <img src={leftArrowIcon} alt="left arrow"></img>
       </PaginationButton>
-      {["1", "2", "3", "4", "5"].map((num) => {
-        return (
-          <PaginationButton
-            key={num}
-            id={num}
-            onClick={handlePaginationClick}
-            className={num === page ? "selected" : ""}
-          >
-            {num}
-          </PaginationButton>
-        );
-      })}
+      {["1", "2", "3", "4", "5"].map((num) => (
+        <PaginationButton
+          key={num}
+          id={num}
+          onClick={handlePaginationClick}
+          className={num === page ? "selected" : ""}
+        >
+          {num}
+        </PaginationButton>
+      ))}
       <PaginationButton
         id="nextPage"
         className="image"
