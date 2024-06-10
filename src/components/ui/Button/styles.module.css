@@ -10,6 +10,11 @@
   cursor: pointer;
 }
 
+.mainPageLogin {
+  width: 128px;
+  height: 48px;
+}
+
 .login {
   flex-shrink: 0;
 }
