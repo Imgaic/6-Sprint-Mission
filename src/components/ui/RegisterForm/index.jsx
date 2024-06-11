@@ -3,15 +3,17 @@ import PasswordInputFormat from "@ui/PasswordInputFormat";
 import TextInputFormat from "@ui/TextInputFormat";
 import styles from "./styles.module.css";
 
-function LoginForm({
+function RegisterForm({
   values,
   errorMessages,
   isVisible,
   handleInputChange,
   handleVisibleClick,
 }) {
-  const { email, password } = values;
-  const { emailError, passwordError } = errorMessages;
+  const { email, nickname, password, confirmPassword } = values;
+  const { emailError, nicknameError, passwordError, confirmPasswordError } =
+    errorMessages;
+  const { passwordVisible, confirmPasswordVisible } = isVisible;
 
   return (
     <form className={styles.layout}>
@@ -21,16 +23,30 @@ function LoginForm({
         value={email}
         onChange={handleInputChange}
       />
+      <TextInputFormat
+        type="nickname"
+        error={nicknameError}
+        value={nickname}
+        onChange={handleInputChange}
+      />
       <PasswordInputFormat
         type="password"
         error={passwordError}
         value={password}
         onChange={handleInputChange}
         onClick={handleVisibleClick}
-        visibleType={isVisible}
+        visibleType={passwordVisible}
+      />
+      <PasswordInputFormat
+        type="confirmPassword"
+        error={confirmPasswordError}
+        value={confirmPassword}
+        onChange={handleInputChange}
+        onClick={handleVisibleClick}
+        visibleType={confirmPasswordVisible}
       />
       <Button
-        className="loginPage"
+        className="register"
         isDisabled={emailError !== "" || passwordError !== ""}
       >
         로그인
@@ -39,4 +55,4 @@ function LoginForm({
   );
 }
 
-export default LoginForm;
+export default RegisterForm;
