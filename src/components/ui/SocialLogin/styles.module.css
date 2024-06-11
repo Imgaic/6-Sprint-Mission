@@ -1,0 +1,21 @@
+.layout {
+  background-color: #e6f2ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+  margin: 24px 0;
+  border-radius: 8px;
+}
+
+.phrase {
+  font-weight: 500;
+  font-size: 16px;
+  word-break: keep-all;
+}
+
+.snsLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

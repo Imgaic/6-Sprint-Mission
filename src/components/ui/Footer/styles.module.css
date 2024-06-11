@@ -35,23 +35,6 @@
   gap: 12px;
 }
 
-.snsLink {
-  width: 20px;
-  height: 20px;
-}
-.facebook {
-  background-image: url("@assets/icons/ic_facebook.png");
-}
-.twitter {
-  background-image: url("@assets/icons/ic_twitter.png");
-}
-.youtube {
-  background-image: url("@assets/icons/ic_youtube.png");
-}
-.instagram {
-  background-image: url("@assets/icons/ic_instagram.png");
-}
-
 @media all and (max-width: 1199px) {
   .container {
     padding: 32px 104px 108px;

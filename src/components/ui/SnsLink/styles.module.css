@@ -1,0 +1,28 @@
+.link {
+  width: 20px;
+  height: 20px;
+}
+.facebook {
+  background-image: url("@assets/icons/ic_facebook.png");
+}
+.twitter {
+  background-image: url("@assets/icons/ic_twitter.png");
+}
+.youtube {
+  background-image: url("@assets/icons/ic_youtube.png");
+}
+.instagram {
+  background-image: url("@assets/icons/ic_instagram.png");
+}
+
+.auth {
+  width: 42px;
+  height: 42px;
+  background-size: contain;
+}
+.google {
+  background-image: url("@assets/icons/ic_google.png");
+}
+.kakaotalk {
+  background-image: url("@assets/icons/ic_kakaotalk.png");
+}

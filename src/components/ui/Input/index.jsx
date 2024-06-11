@@ -7,6 +7,7 @@ function Input({
   onChange = null,
   onKeyUp = null,
   value,
+  type,
 }) {
   return (
     <input
@@ -17,6 +18,7 @@ function Input({
       onChange={onChange}
       onKeyUp={onKeyUp}
       value={value}
+      type={type}
     ></input>
   );
 }

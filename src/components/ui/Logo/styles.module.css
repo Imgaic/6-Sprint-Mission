@@ -4,6 +4,12 @@
   height: 51px;
 }
 
+.auth {
+  margin: 0 auto 40px;
+  width: 396px;
+  height: 132px;
+}
+
 @media (min-width: 744px) {
   .mobile {
     display: none;
@@ -17,5 +23,11 @@
   }
   .desktop {
     display: none;
+  }
+  .auth {
+    display: block;
+    width: 198px;
+    height: 66px;
+    margin-bottom: 24px;
   }
 }

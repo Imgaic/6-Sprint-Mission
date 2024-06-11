@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SnsLink from "@ui/SnsLink";
 import styles from "./styles.module.css";
 
 function Footer() {
@@ -22,16 +23,6 @@ function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-function SnsLink({ type }) {
-  return (
-    <Link
-      className={`${styles.snsLink} ${styles[type]}`}
-      to={`https://www.${type}.com/`}
-      target="_blank"
-    ></Link>
   );
 }
 

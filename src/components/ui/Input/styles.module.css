@@ -1,4 +1,6 @@
-.input {
+.input,
+.auth,
+.authError {
   width: 100%;
   height: 56px;
   border-radius: 12px;
@@ -10,4 +12,11 @@
 }
 .input::placeholder {
   color: var(--gray400);
+}
+
+.auth:focus {
+  outline: 2.5px solid var(--blue);
+}
+.authError {
+  outline: 2.5px solid var(--red);
 }
