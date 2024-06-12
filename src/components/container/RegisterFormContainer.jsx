@@ -1,7 +1,8 @@
 import { useState } from "react";
 import RegisterForm from "@ui/RegisterForm";
+import useValidationCheck from "@utils/checkValidationHook";
 
-const EmailPattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-za-z0-9\-]+/;
+const Type = "register";
 
 function RegisterFormContainer() {
   const [values, setValues] = useState({
@@ -10,66 +11,27 @@ function RegisterFormContainer() {
     password: "",
     confirmPassword: "",
   });
-  const [errorMessages, setErrorMessages] = useState({
-    emailError: "initial",
-    nicknameError: "initial",
-    passwordError: "initial",
-    confirmPasswordError: "initial",
-  });
   const [isVisible, setIsVisible] = useState({
     passwordVisible: false,
     confirmPasswordVisible: false,
   });
+  const {
+    errorMessages,
+    checkEmail,
+    checkNickname,
+    checkPassword,
+    checkConfirmPassword,
+  } = useValidationCheck(Type);
 
   const handleInputChange = (e) => {
     if (e.target.id === "email") {
-      if (!e.target.value || !EmailPattern.test(e.target.value)) {
-        setErrorMessages((prev) => ({
-          ...prev,
-          emailError: !e.target.value
-            ? "이메일을 입력해주세요"
-            : "잘못된 이메일 형식입니다",
-        }));
-      } else
-        setErrorMessages((prev) => ({
-          ...prev,
-          emailError: "",
-        }));
+      checkEmail(e.target.value);
     } else if (e.target.id === "nickname") {
-      if (!e.target.value) {
-        setErrorMessages((prev) => ({
-          ...prev,
-          nicknameError: "닉네임을 입력해주세요",
-        }));
-      } else
-        setErrorMessages((prev) => ({
-          ...prev,
-          nicknameError: "",
-        }));
+      checkNickname(e.target.value);
     } else if (e.target.id === "password") {
-      if (!e.target.value || e.target.value.length < 8) {
-        setErrorMessages((prev) => ({
-          ...prev,
-          passwordError: !e.target.value
-            ? "비밀번호를 입력해주세요"
-            : "비밀번호를 8자 이상 입력해주세요",
-        }));
-      } else
-        setErrorMessages((prev) => ({
-          ...prev,
-          passwordError: "",
-        }));
+      checkPassword(e.target.value);
     } else if (e.target.id === "confirmPassword") {
-      if (e.target.value !== values.password) {
-        setErrorMessages((prev) => ({
-          ...prev,
-          confirmPasswordError: "비밀번호가 일치하지 않습니다",
-        }));
-      } else
-        setErrorMessages((prev) => ({
-          ...prev,
-          confirmPasswordError: "",
-        }));
+      checkConfirmPassword(e.target.value, values.password);
     }
 
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
