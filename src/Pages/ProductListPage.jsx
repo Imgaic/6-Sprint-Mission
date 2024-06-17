@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
-
-import Button from "../components/ui/Button";
-import Nav from "../components/ui/Nav";
-import ProductList from "../components/ui/ProductList";
+import Button from "@ui/Button";
+import Nav from "@ui/Nav";
+import ProductList from "@ui/ProductList";
 
 function ProductListPage() {
   const navigate = useNavigate();

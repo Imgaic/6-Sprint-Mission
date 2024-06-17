@@ -1,31 +1,28 @@
-.productDetailPage {
+.productDetailPage,
+.addProductPage {
   width: 100%;
-  height: 104px;
-  background-color: var(--gray100);
   border-radius: 12px;
-  padding: 16px 24px;
   resize: none;
+
   line-height: 24px;
-}
-.productDetailPage::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: var(--gray400);
+}
+
+.productDetailPage {
+  height: 104px;
+  background-color: var(--gray100);
+  padding: 16px 24px;
 }
 
 .addProductPage {
-  width: 100%;
   height: 200px;
-  border-radius: 12px;
   padding-left: 24px;
   padding-top: 16px;
   background-color: var(--gray50);
-
-  font-weight: 400;
-  font-size: 16px;
-
-  resize: none;
 }
+
+.productDetailPage::placeholder,
 .addProductPage::placeholder {
   color: var(--gray400);
 }

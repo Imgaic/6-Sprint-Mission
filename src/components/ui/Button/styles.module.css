@@ -10,12 +10,27 @@
   cursor: pointer;
 }
 
+.mainPageLogin {
+  width: 128px;
+  height: 48px;
+}
+
 .login {
   flex-shrink: 0;
 }
 
 .addItem {
   text-wrap: nowrap;
+}
+
+.loginPage,
+.register {
+  width: 100%;
+  border-radius: 40px;
+  padding: 16px 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .button:hover {
@@ -25,4 +40,15 @@
 .button:disabled {
   background-color: var(--gray400);
   cursor: default;
+}
+
+@media (max-width: 1199px) {
+  .register {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .register {
+    margin-top: 0;
+  }
 }

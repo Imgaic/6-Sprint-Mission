@@ -1,5 +1,5 @@
-import Button from "../Button";
-import Textarea from "../Textarea";
+import Button from "@ui/Button";
+import Textarea from "@ui/Textarea";
 import styles from "./styles.module.css";
 
 function AddComment({ content, isDisabled, handleClick, handleChange }) {

@@ -1,0 +1,16 @@
+.label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.48px;
+  margin-bottom: 16px;
+  display: block;
+  color: var(--gray800);
+}
+
+@media (max-width: 767px) {
+  .label {
+    font-size: 14px;
+    line-height: 16.71px;
+    margin-bottom: 8px;
+  }
+}

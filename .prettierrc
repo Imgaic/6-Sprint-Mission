@@ -6,13 +6,16 @@
   "singleQuote": false,
   "semi": true,
   "importOrder": [
-    "^@mui/(.*)$",
-    "^@untitled-ui/(.*)$",
     "^react",
-    "^src/(.*)$",
     "<THIRD_PARTY_MODULES>",
+    "^@pages/(.*)$",
+    "^@container/(.*)$",
+    "^@ui/(.*)$",
+    "^@api/(.*)$",
+    "^@utils/(.*)$",
+    "^@assets/(.*)$",
+    "^@styles/(.*)$",
     "^[./]"
   ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "importOrderSeparation": false
 }

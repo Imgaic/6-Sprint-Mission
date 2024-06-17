@@ -1,5 +1,5 @@
-import AddCommentContainer from "../../container/AddCommentContainer";
-import CommentsPresenter from "../CommentsPresenter";
+import AddCommentContainer from "@container/AddCommentContainer";
+import CommentsPresenter from "@ui/CommentsPresenter";
 import styles from "./styles.module.css";
 
 function Comments({ comments, setIsAdded }) {

@@ -1,13 +1,13 @@
-.empty {
+.layout {
   width: fit-content;
   margin: 0 auto;
 }
 
-.emptyImage {
+.image {
   width: 200px;
 }
 
-.emptyInfo {
+.info {
   color: var(--gray400);
   font-size: 16px;
   font-weight: 400;

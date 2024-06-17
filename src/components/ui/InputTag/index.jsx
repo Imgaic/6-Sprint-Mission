@@ -1,5 +1,5 @@
-import Input from "../Input";
-import Tag from "../InputtedTag";
+import Input from "@ui/Input";
+import Tag from "@ui/InputtedTag";
 import styles from "./styles.module.css";
 
 function InputTag({
@@ -22,10 +22,9 @@ function InputTag({
         value={value}
       />
       <div className={styles.tagsPresenter}>
-        {tags.length !== 0 &&
-          tags.map((tag) => {
-            return <Tag tag={tag} key={tag} onDelete={onDelete} />;
-          })}
+        {tags.map((tag) => (
+          <Tag tag={tag} key={tag} onDelete={onDelete} />
+        ))}
       </div>
     </div>
   );

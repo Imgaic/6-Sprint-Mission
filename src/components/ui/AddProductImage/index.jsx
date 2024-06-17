@@ -1,7 +1,6 @@
 import styled from "styled-components";
-
-import xButtonIcon from "../../../assets/icons/ic_X_blue.svg";
-import plusIcon from "../../../assets/icons/ic_plus.svg";
+import xButtonIcon from "@assets/icons/ic_X_blue.svg";
+import plusIcon from "@assets/icons/ic_plus.svg";
 import styles from "./styles.module.css";
 
 const ImagePreview = styled.div`
@@ -16,6 +15,11 @@ const ImagePreview = styled.div`
   background-position: center;
   background-size: contain;
 
+  @media screen and (max-width: 1199px) {
+    width: 162px;
+    height: 162px;
+  }
+
   ${({ $imageURL }) =>
     $imageURL &&
     `background-image: url(${$imageURL})};
@@ -27,7 +31,11 @@ function AddProductImage({ preview, value, handleChange, handleDeleteClick }) {
     <div className={styles.flexedImage}>
       <label className={styles.imageInputBox}>
         <div className={styles.imageInputDesign}>
-          <img className={styles.plusIcon} src={plusIcon} alt="plusIcon"></img>
+          <img
+            className={styles.plusIcon}
+            src={plusIcon}
+            alt="더하기 버튼"
+          ></img>
           <h5 className={styles.phrase}>이미지 등록</h5>
         </div>
         <input
@@ -43,7 +51,7 @@ function AddProductImage({ preview, value, handleChange, handleDeleteClick }) {
             className={styles.xButtonIcon}
             src={xButtonIcon}
             onClick={handleDeleteClick}
-            alt="xButtonIcon"
+            alt="X 버튼"
           />
         </ImagePreview>
       )}

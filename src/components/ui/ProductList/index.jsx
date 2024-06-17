@@ -1,5 +1,5 @@
-import BestProductsContainer from "../../container/BestProductsContainer";
-import EntireProductListContainer from "../../container/EntireProductListContainer";
+import BestProductsContainer from "@container/BestProductsContainer";
+import EntireProductListContainer from "@container/EntireProductListContainer";
 import styles from "./styles.module.css";
 
 function ProductList() {

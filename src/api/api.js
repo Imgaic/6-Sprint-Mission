@@ -1,33 +1,31 @@
 const BASE_URL = "https://panda-market-api.vercel.app";
 
-function fetcher(order, page, pageSize) {
-  let url = BASE_URL + "/products";
-  if ((order, page, pageSize !== "")) {
-    url += "?";
-
-    if (order !== "") url += `orderBy=${order}`;
-    if (url[-1] !== "?") url += "&";
-    if (page !== "") url += `page=${page}`;
-    if (url[-1] !== "?") url += "&";
-    if (pageSize !== "") url += `pageSize=${pageSize}`;
-  }
-  return url;
-}
-
-async function getProductList({ order, page = "1", pageSize = "10" }) {
+const getProductList = async ({
+  order = "recent",
+  page = "1",
+  pageSize = "10",
+}) => {
+  let response;
   try {
-    const url = fetcher(order, page, pageSize);
-    const response = await fetch(url);
-    if (response.ok) {
-      const body = await response.json();
-      return body;
-    } else {
-      console.log("Promise resolved but HTTP status failed");
-    }
-  } catch {
-    console.log("Promise rejected");
+    const url =
+      BASE_URL + `/products?orderBy=${order}&page=${page}&pageSize=${pageSize}`;
+    response = await fetch(url);
+  } catch (error) {
+    console.error(error);
+    throw error;
   }
-}
+
+  if (!response.ok) {
+    const error = new Error(`HTTP error! status: ${response.status}`);
+    error.name = "HttpError";
+    error.status = response.status;
+    console.error(error);
+    throw error;
+  }
+
+  const body = await response.json();
+  return body.list;
+};
 
 const getProduct = async (productId) => {
   let response;
@@ -49,6 +47,28 @@ const getProduct = async (productId) => {
 
   const body = await response.json();
   return body;
+};
+
+const getComments = async ({ productId, limit }) => {
+  let response;
+  try {
+    const url = BASE_URL + `/products/${productId}/comments/?limit=${limit}`;
+    response = await fetch(url);
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+
+  if (!response.ok) {
+    const error = new Error(`HTTP error! status: ${response.status}`);
+    error.name = "HttpError";
+    error.status = response.status;
+    console.error(error);
+    throw error;
+  }
+
+  const body = await response.json();
+  return body.list;
 };
 
 const postComment = async ({ productId, content }) => {
@@ -78,26 +98,4 @@ const postComment = async ({ productId, content }) => {
   }
 };
 
-const getComments = async ({ productId, limit }) => {
-  let response;
-  try {
-    const url = BASE_URL + `/products/${productId}/comments/?limit=${limit}`;
-    response = await fetch(url);
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-
-  if (!response.ok) {
-    const error = new Error(`HTTP error! status: ${response.status}`);
-    error.name = "HttpError";
-    error.status = response.status;
-    console.error(error);
-    throw error;
-  }
-
-  const body = await response.json();
-  return body.list;
-};
-
-export { getProductList, getProduct, postComment, getComments };
+export { getProductList, getProduct, getComments, postComment };

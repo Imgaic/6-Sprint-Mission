@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+}
+
+.label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.48px;
+  margin-bottom: 16px;
+  display: block;
+  color: var(--gray800);
+}
+
+.visibleButton {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 53px;
+  right: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .label {
+    font-size: 14px;
+    line-height: 16.71px;
+    margin-bottom: 8px;
+  }
+  .visibleButton {
+    top: 41px;
+  }
+}

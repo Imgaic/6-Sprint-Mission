@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-import { getProduct } from "../../api/api";
-import ProductPresenter from "../ui/ProductPresenter";
+import ProductPresenter from "@ui/ProductPresenter";
+import { getProduct } from "@api/api";
 
 function ProductPresenterContainer() {
   const { id } = useParams();
@@ -26,7 +25,9 @@ function ProductPresenterContainer() {
     loadProduct();
   }, []);
 
-  return !errorMessage && <ProductPresenter product={product} />;
+  if (errorMessage) return;
+
+  return <ProductPresenter product={product} />;
 }
 
 export default ProductPresenterContainer;

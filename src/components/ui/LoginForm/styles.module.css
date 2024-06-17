@@ -1,0 +1,11 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 767px) {
+  .layout {
+    gap: 16px;
+  }
+}

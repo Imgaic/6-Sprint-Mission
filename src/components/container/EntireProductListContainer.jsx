@@ -1,18 +1,26 @@
 import { useEffect, useState } from "react";
-
-import { getProductList } from "../../api/api";
-import usePageSize from "../../utils/pageSizeHook";
-import EntireProductList from "../ui/EntireProductList";
+import EntireProductList from "@ui/EntireProductList";
+import { getProductList } from "@api/api";
+import usePageSize from "@utils/pageSizeHook";
 
 function EntireProductListContainer(props) {
   const [products, setProducts] = useState([]);
   const [order, setOrder] = useState("recent");
   const [page, setPage] = useState("1");
+  const [errorMessage, setErrorMessage] = useState("");
   const pageSize = usePageSize("entire");
 
   const loadProducts = async (options) => {
-    const { list } = await getProductList(options);
-    setProducts(list);
+    try {
+      const list = await getProductList(options);
+      setProducts(list);
+    } catch (error) {
+      if (error.name === "TypeError") {
+        setErrorMessage("네트워크를 확인하세요");
+      } else if (error.name === "HttpError") {
+        setErrorMessage(error.status);
+      }
+    }
   };
 
   useEffect(() => {
@@ -38,6 +46,8 @@ function EntireProductListContainer(props) {
       setPage(e.currentTarget.id);
     }
   };
+
+  if (errorMessage) return;
 
   return (
     <EntireProductList

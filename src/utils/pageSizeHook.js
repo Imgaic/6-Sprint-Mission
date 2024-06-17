@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-
-import { calculatePageSize } from "./screenSize";
+import { calculatePageSize } from "@utils/screenSize";
 
 export default function usePageSize(type) {
   const [pageSize, setPageSize] = useState(() => calculatePageSize(type));
   const delay = 300;
   let timer = null;
 
-  const handlePageSize = () => {
+  const handlePageSizeChange = () => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       setPageSize(calculatePageSize(type));
@@ -15,10 +14,10 @@ export default function usePageSize(type) {
   };
 
   useEffect(() => {
-    window.addEventListener("resize", handlePageSize);
+    window.addEventListener("resize", handlePageSizeChange);
 
     return () => {
-      window.removeEventListener("resize", handlePageSize);
+      window.removeEventListener("resize", handlePageSizeChange);
     };
   }, []);
 

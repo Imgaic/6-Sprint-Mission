@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
-
-import Button from "../components/ui/Button";
-import Nav from "../components/ui/Nav";
-import ProductDetail from "../components/ui/ProductDetail";
+import Button from "@ui/Button";
+import Nav from "@ui/Nav";
+import ProductDetail from "@ui/ProductDetail";
 
 function ProductDetailPage() {
   const navigate = useNavigate();

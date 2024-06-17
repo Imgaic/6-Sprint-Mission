@@ -1,6 +1,6 @@
-import CommentsContainer from "../../container/CommentsContainer";
-import ProductPresenterContainer from "../../container/ProductPresenterContainer";
-import ReturnButton from "../ReturnButton";
+import CommentsContainer from "@container/CommentsContainer";
+import ProductPresenterContainer from "@container/ProductPresenterContainer";
+import ReturnButton from "@ui/ReturnButton";
 import styles from "./styles.module.css";
 
 function ProductDetail() {

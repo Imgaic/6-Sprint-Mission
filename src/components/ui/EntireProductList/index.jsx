@@ -1,11 +1,10 @@
 import { useNavigate } from "react-router-dom";
-
-import searchIcon from "../../../assets/icons/ic_search.svg";
-import { isDesktop } from "../../../utils/screenSize";
-import DropdownContainer from "../../container/DropdownContainer";
-import Button from "../Button";
-import Pagination from "../Pagination";
-import ProductCard from "../ProductCard";
+import DropdownContainer from "@container/DropdownContainer";
+import Button from "@ui/Button";
+import Pagination from "@ui/Pagination";
+import ProductCard from "@ui/ProductCard";
+import { isDesktop } from "@utils/screenSize";
+import searchIcon from "@assets/icons/ic_search.svg";
 import styles from "./styles.module.css";
 
 function EntireProductList({
@@ -18,17 +17,17 @@ function EntireProductList({
   const navigate = useNavigate();
   return (
     <div>
-      <div className={styles.allItems__container}>
-        <h2 className={styles.allItems__nameTag}>
+      <div className={styles.container}>
+        <h2 className={styles.nameTag}>
           {isDesktop() ? "전체 상품" : "판매 중인 상품"}
         </h2>
-        <div className={styles.allItems__searchContainer}>
-          <label htmlFor="search" className={styles.allItems__searchIcon}>
-            <img src={searchIcon} alt="search"></img>
+        <div className={styles.searchContainer}>
+          <label htmlFor="search" className={styles.searchIcon}>
+            <img src={searchIcon} alt="magnifying glasses"></img>
           </label>
           <input
             id="search"
-            className={styles.allItems__search}
+            className={styles.search}
             placeholder="검색할 상품을 입력해주세요"
           ></input>
         </div>
@@ -37,13 +36,10 @@ function EntireProductList({
         </Button>
         <DropdownContainer order={order} handleOrderClick={handleOrderClick} />
       </div>
-      <div className={styles.allItems__layout}>
-        {products.length !== 0 &&
-          products.map((product) => {
-            return (
-              <ProductCard key={product.id} type="all" product={product} />
-            );
-          })}
+      <div className={styles.layout}>
+        {products.map((product) => (
+          <ProductCard key={product.id} type="all" product={product} />
+        ))}
       </div>
       <Pagination page={page} handlePaginationClick={handlePaginationClick} />
     </div>

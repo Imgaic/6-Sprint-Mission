@@ -1,6 +1,6 @@
-import { elapsedTime } from "../../../utils/calculateTimeDifference";
-import { isMobile, isTablet } from "../../../utils/screenSize";
-import Kebab from "../Kebab";
+import Kebab from "@ui/Kebab";
+import { elapsedTime } from "@utils/calculateTimeDifference";
+import { isMobile, isTablet } from "@utils/screenSize";
 import styles from "./styles.module.css";
 
 function Comment({ comment }) {
